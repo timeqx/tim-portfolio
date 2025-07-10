@@ -17,49 +17,9 @@
 
  
 
-  const certifications = [
-    {
-      name: "AWS Certified Developer - Associate",
-      issuer: "Amazon Web Services",
-      year: "2023",
-      id: "AWS-DEV-2023-001"
-    },
-    {
-      name: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      year: "2023",
-      id: "GCP-PROF-2023-001"
-    },
-    {
-      name: "MongoDB Certified Developer",
-      issuer: "MongoDB Inc.",
-      year: "2022",
-      id: "MONGO-DEV-2022-001"
-    }
-  ];
+ 
 
-  const experience = [
-    {
-      title: "Senior Full Stack Developer",
-      company: "Tech Innovations Inc.",
-      period: "2022 - Present",
-      responsibilities: [
-        "Lead development of microservices architecture serving 100K+ users",
-        "Mentored 3 junior developers and conducted code reviews",
-        "Improved application performance by 40% through optimization"
-      ]
-    },
-    {
-      title: "Frontend Developer",
-      company: "Digital Solutions Co.",
-      period: "2021 - 2022",
-      responsibilities: [
-        "Developed responsive web applications using React and Vue.js",
-        "Collaborated with UX/UI designers to implement pixel-perfect designs",
-        "Implemented automated testing resulting in 30% fewer bugs"
-      ]
-    }
-  ];
+ 
 
   let activeSection = 'about';
   
