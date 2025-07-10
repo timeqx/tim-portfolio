@@ -1,4 +1,4 @@
-export  const experience = [
+export const experience = [
     {
       title: "Senior Full Stack Developer",
       company: "Tech Innovations Inc.",

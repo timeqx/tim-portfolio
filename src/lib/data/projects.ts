@@ -1,4 +1,4 @@
-export  const projects = [
+export const projects = [
     {
       title: "E-commerce Platform",
       description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
