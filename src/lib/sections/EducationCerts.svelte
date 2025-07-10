@@ -1,5 +1,6 @@
 <script lang="ts">
   export let education: {
+    level: string;
     degree: string;
     institution: string;
     year: string;
@@ -23,6 +24,7 @@
         <div class="space-y-6">
           {#each education as edu}
             <div class="border-l-4 border-gray-200 pl-6">
+              <p class="text-gray-600">{edu.level}</p>
               <h3 class="text-xl font-semibold text-gray-900">{edu.degree}</h3>
               <p class="text-gray-600">{edu.institution}</p>
               <p class="text-gray-500">{edu.year} • {edu.gpa}</p>

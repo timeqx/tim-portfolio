@@ -199,50 +199,34 @@
 </div>
 
 <style>
-	.gallery-perspective {
-		transform: rotateX(55deg) rotateY(0deg) rotateZ(-45deg);
-		transform-style: preserve-3d;
-	}
+	 .gallery-perspective {
+    transform: rotateX(55deg) rotateY(0deg) rotateZ(-45deg);
+    transform-style: preserve-3d;
+  }
 
-	.gallery-column {
-		transform-style: preserve-3d;
-	}
+  .gallery-column {
+    transform-style: preserve-3d;
+  }
 
-	@keyframes gallery-float-1 {
-		0% {
-			transform: translateY(0px);
-		}
-		100% {
-			transform: translateY(-100px);
-		}
-	}
+  @keyframes gallery-float-1 {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-100px); }
+  }
 
-	@keyframes gallery-float-2 {
-		0% {
-			transform: translateY(0px);
-		}
-		100% {
-			transform: translateY(-120px);
-		}
-	}
+  @keyframes gallery-float-2 {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-120px); }
+  }
 
-	@keyframes gallery-float-3 {
-		0% {
-			transform: translateY(0px);
-		}
-		100% {
-			transform: translateY(-80px);
-		}
-	}
+  @keyframes gallery-float-3 {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-80px); }
+  }
 
-	@keyframes gallery-float-4 {
-		0% {
-			transform: translateY(0px);
-		}
-		100% {
-			transform: translateY(-140px);
-		}
-	}
+  @keyframes gallery-float-4 {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-140px); }
+  }
 
 	.aspect-970\/580 {
 		aspect-ratio: 970/580;
@@ -302,7 +286,5 @@
 		aspect-ratio: 971/725;
 	}
 
-	.transform-3d {
-		transform-style: preserve-3d;
-	}
+	
 </style>

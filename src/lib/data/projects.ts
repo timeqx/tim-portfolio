@@ -1,23 +1,34 @@
 export const projects = [
-    {
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      github: "https://github.com/johndoe/ecommerce",
-      demo: "https://ecommerce-demo.com"
-    },
-    {
-      title: "Task Management App",
-      description: "Real-time collaborative task management application built with SvelteKit and Socket.io. Supports team collaboration and project tracking.",
-      tech: ["SvelteKit", "Socket.io", "MongoDB", "Tailwind CSS"],
-      github: "https://github.com/johndoe/taskmanager",
-      demo: "https://taskmanager-demo.com"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "Interactive weather dashboard with data visualization using Chart.js and weather API integration. Features location-based forecasts.",
-      tech: ["Vue.js", "Chart.js", "OpenWeather API", "Vuetify"],
-      github: "https://github.com/johndoe/weather-dashboard",
-      demo: "https://weather-demo.com"
-    }
-  ];
+  {
+    title: "Dripstr – 3D Apparel E-commerce Platform",
+    description:
+      "Capstone project featuring 3D avatar integration, apparel visualization, and in-browser 3D editing. Developed using React, .NET, and Supabase.",
+    tech: ["React", "C#", ".NET", "XAML", "Supabase", "Tailwind CSS"],
+    github: "https://github.com/timeqx/dripstr", // Replace with your actual link
+    demo: ""
+  },
+  {
+    title: "Mobile Ticketing System for Transport Company",
+    description:
+      "Mobile-based transaction and e-ticketing platform built using Flutter. Includes real-time ticket generation, sales reporting, and conductor-side features.",
+    tech: ["Flutter", "Dart", "Firebase"],
+    github: "https://github.com/timeqx/transport-system", // Replace with your actual link
+    demo: ""
+  },
+  {
+    title: "Inventory Management System",
+    description:
+      "Standalone desktop application for inventory tracking and supplier management, built in Java with MySQL integration.",
+    tech: ["Java", "MySQL"],
+    github: "",
+    demo: ""
+  },
+  {
+    title: "Learning Management System",
+    description:
+      "Web-based platform for managing users, lessons, and student progress, built with Svelte, Firebase, and role-based access control.",
+    tech: ["Svelte", "JavaScript", "Firebase", "Tailwind CSS"],
+    github: "",
+    demo: ""
+  }
+];

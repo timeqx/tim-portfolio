@@ -1,22 +1,13 @@
 export const experience = [
-    {
-      title: "Senior Full Stack Developer",
-      company: "Tech Innovations Inc.",
-      period: "2022 - Present",
-      responsibilities: [
-        "Lead development of microservices architecture serving 100K+ users",
-        "Mentored 3 junior developers and conducted code reviews",
-        "Improved application performance by 40% through optimization"
-      ]
-    },
-    {
-      title: "Frontend Developer",
-      company: "Digital Solutions Co.",
-      period: "2021 - 2022",
-      responsibilities: [
-        "Developed responsive web applications using React and Vue.js",
-        "Collaborated with UX/UI designers to implement pixel-perfect designs",
-        "Implemented automated testing resulting in 30% fewer bugs"
-      ]
-    }
-  ];
+  {
+    title: "Junior QA Specialist (Intern)",
+    company: "Confidential – Quezon City",
+    period: "2024",
+    responsibilities: [
+      "Documented and reported software bugs and functional issues for developing systems",
+      "Developed test cases and coordinated with developers and IT to validate bug fixes",
+      "Participated in sprint planning and internal QA seminars to enhance testing practices",
+      "Contributed to product reviews and feature planning with a focus on usability and stability"
+    ]
+  }
+];  

@@ -1,8 +1,9 @@
 <!-- src/routes/+page.svelte -->
-<script>
+<script lang="ts">
   import Hero from '$lib/sections/Hero.svelte';
   import TechStack from '$lib/sections/TechStack.svelte';
   import Experience from '$lib/sections/Experience.svelte';
+  import Gallery from '$lib/sections/Gallery.svelte';
   import Projects from '$lib/sections/Projects.svelte';
   import EducationCerts from '$lib/sections/EducationCerts.svelte';
   import Contact from '$lib/sections/Contact.svelte';
@@ -20,10 +21,10 @@
   import {experience} from '$lib/data/experience';
 
   let activeSection = 'about';
-  function scrollToSection(sectionId) {
-    activeSection = sectionId;
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  }
+  function scrollToSection(sectionId: string) {
+  activeSection = sectionId;
+  document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 
 <svelte:head>
@@ -50,6 +51,7 @@
 
   <!-- Sections -->
   <Hero {profile} />
+  
   <TechStack {techStack} />
   <Experience {experience} />
   <Projects {projects} />
