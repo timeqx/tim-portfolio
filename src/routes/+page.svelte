@@ -32,12 +32,12 @@
   <meta name="description" content="{profile.name} - {profile.title} Portfolio" />
 </svelte:head>
 
-<div class="min-h-screen bg-gray-50">
+<div class="min-h-screen">
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-sm border-b border-gray-200 z-50">
+  <nav class=" top-0 w-full  backdrop-blur-sm  bg-[#131010]  z-50">
     <div class="max-w-6xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
-        <div class="font-semibold text-xl text-gray-900">{profile.name}</div>
+        <div class="font-semibold text-xl text-gray-400">{profile.name}</div>
         <div class="hidden md:flex space-x-8">
           <button on:click={() => scrollToSection('about')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'about'}>About</button>
           <button on:click={() => scrollToSection('experience')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'experience'}>Experience</button>
@@ -51,7 +51,7 @@
 
   <!-- Sections -->
   <Hero {profile} />
-  
+  <Gallery />
   <TechStack {techStack} />
   <Experience {experience} />
   <Projects {projects} />
