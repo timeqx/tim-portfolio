@@ -1,6 +1,7 @@
 <!-- src/routes/+page.svelte -->
 <script lang="ts">
   import Hero from '$lib/sections/Hero.svelte';
+ import Iam from '$lib/sections/Iam.svelte';
   import TechStack from '$lib/sections/TechStack.svelte';
   import Experience from '$lib/sections/Experience.svelte';
   import Gallery from '$lib/sections/Gallery.svelte';
@@ -34,7 +35,7 @@
 
 <div class="min-h-screen">
   <!-- Navigation -->
-  <nav class=" top-0 w-full  backdrop-blur-sm  bg-[#131010]  z-50">
+  <nav class=" top-0 w-full absolute  bg-transparent  z-50">
     <div class="max-w-6xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
         <div class="font-semibold text-xl text-gray-400">{profile.name}</div>
@@ -51,6 +52,7 @@
 
   <!-- Sections -->
   <Hero {profile} />
+  <Iam  {profile}  />
   <Gallery />
   <TechStack {techStack} />
   <Experience {experience} />

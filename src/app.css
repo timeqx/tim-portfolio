@@ -20,25 +20,25 @@
 
 @keyframes glitch {
   0% {
-    text-shadow: 8px 0 #702cb1, -4px 0 #9333ea;
+    text-shadow: 8px 0 #FAC050ff, -4px 0 #8F4816;
   }
   2% {
-    text-shadow: 0 0 #a855f7, 0 0 #9333ea;
+    text-shadow: 0 0 #B36673ff, 0 0 #9471CBff;
   }
   40% {
-    text-shadow: 4px 0 #301846, 0 0 #702cb1;
+    text-shadow: 4px 0 #9471CB, -2px 0 #5A30B6ff;
   }
   41% {
-    text-shadow: 0 0 #702cb1, 0 0 #9333ea;
+    text-shadow: 0 0 #B36673ff, 0 0 #8F4816;
   }
   80% {
-    text-shadow: -2px 0 #9333ea, 4px 0 #5a3180;
+    text-shadow: -2px 0 #8F4816, 4px 0 #FAC050ff;
   }
   82% {
-    text-shadow: 1px 0 #9333ea, -2px 0 #702cb1;
+    text-shadow: 1px 0 #B36673ff, -2px 0 #9471CBff;
   }
     100% {
-    text-shadow: 0 0 #702cb1, 0 0 #9333ea;
+    text-shadow: 0 0 #5A30B6ff, 0 0 #5A30B6ff;
   }
 }
 
@@ -104,6 +104,8 @@
     box-shadow: 20px 0px 15px 4px #FAC050ff;
   }
 }
+
+
 
 
 
