@@ -10,6 +10,7 @@
   import Contact from '$lib/sections/Contact.svelte';
   import Footer from '$lib/sections/Footer.svelte';
   import { onMount } from 'svelte';
+  
 
   let mounted = false;
   onMount(() => { mounted = true; });
@@ -38,10 +39,10 @@
   <nav class=" top-0 w-full absolute  bg-transparent  z-50">
     <div class="max-w-6xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
-        <div class="font-semibold text-xl text-gray-400">{profile.name}</div>
+        <div class="font-semibold text-xl font-[plexMono] text-gray-400">{profile.name}</div>
         <div class="hidden md:flex space-x-8">
           <button on:click={() => scrollToSection('about')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'about'}>About</button>
-          <button on:click={() => scrollToSection('experience')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'experience'}>Experience</button>
+          <button on:click={() => scrollToSection('experience')} class="text-gray-800 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'experience'}>Experience</button>
           <button on:click={() => scrollToSection('projects')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'projects'}>Projects</button>
           <button on:click={() => scrollToSection('education')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'education'}>Education</button>
           <button on:click={() => scrollToSection('contact')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'contact'}>Contact</button>
@@ -53,8 +54,8 @@
   <!-- Sections -->
   <Hero {profile} />
   <Iam  {profile}  />
-  <Gallery />
   <TechStack {techStack} />
+  <Gallery />
   <Experience {experience} />
   <Projects {projects} />
   <EducationCerts {education} {certifications} />

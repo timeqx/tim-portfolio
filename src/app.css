@@ -1,5 +1,14 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-display: swap;
+  font-family: 'plexMono';
+  src: url('/fonts/plexMono-Reg.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px) translateX(0px) rotate(0deg);

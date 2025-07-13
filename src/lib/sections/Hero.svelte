@@ -18,7 +18,7 @@
 		</div>
 		<div class="flex flex-col max-w-2xl items-center justify-center">
 			<h1
-				class="mb-6 w-full animate-[glitch_2s_ease-in_infinite] text-5xl text-gray-200 md:text-9xl  tracking-[2rem] "
+				class="mb-6 w-full animate-[glitch_2s_ease-in_infinite] text-5xl text-gray-200 md:text-9xl  tracking-[2rem] font-extrabold font-[plexMono] "
 			>
 				{profile.name}
 			</h1>

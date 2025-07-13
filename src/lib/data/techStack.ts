@@ -1,22 +1,27 @@
 export const techStack = [
   {
     category: "Frontend",
-    skills: ["React", "Svelte", "Next.js", "Tailwind CSS", "Bootstrap", "XAML"]
+    skills: ["React", "Svelte", "Next.js", "Tailwind", "Bootstrap", "XAML"],
+    color: '#8F4816'
   },
   {
     category: "Mobile",
-    skills: ["Flutter", "Dart"]
+    skills: ["Flutter", "Dart", "Java"],
+    color: '#FAC050ff'
   },
   {
     category: "Backend",
-    skills: ["C#", ".NET", "Java", "Node.js", "SQL"]
+    skills: ["Python","C#", ".NET", "Java", "Node.js", "SQL"],
+   color: '#B36673ff'
   },
   {
     category: "Databases",
-    skills: ["Firebase", "Supabase", "MySQL", "SQLite"]
+    skills: ["Firebase", "Supabase", "MySQL", "SQLite"],
+     color:'#9471CBff',
   },
   {
     category: "Tools & Others",
-    skills: ["Git", "GitHub", "VS Code", "Figma", "Postman", "Agile", "QA Testing"]
+    skills: ["Git", "GitHub", "VS Code", "Figma", "Postman", "Agile", "QA Testing"],
+    color: '#5A30B6ff'
   }
 ];
