@@ -55,9 +55,10 @@
   <Hero {profile} />
   <Iam  {profile}  />
   <TechStack {techStack} />
-  <Gallery />
-  <Experience {experience} />
   <Projects {projects} />
+  <Experience {experience} />
+ 
+   <Gallery />
   <EducationCerts {education} {certifications} />
   <Contact {profile} />
   <Footer {profile} />

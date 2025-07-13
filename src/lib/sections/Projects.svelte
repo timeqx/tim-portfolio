@@ -2,9 +2,12 @@
   export let projects;
 </script>
 
-<section id="projects" class="py-16 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Projects</h2>
+<section id="projects" class="bg-[#F4F3F2] relative py-16 px-6">
+     <div class="absolute top-20 right-0 rotate-90">
+    <p class="md:text-1xl  text-gray-500 font-semibold tracking-widest font-[plexMono] text-left text-2xl ">PROJECTS</p></div>
+  <div class="relative max-w-6xl mx-auto">
+  
+ 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {#each projects as project}
         <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
@@ -21,6 +24,7 @@
             <a href={project.github} target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition-colors">
               GitHub
             </a>
+       
             <a href={project.demo} target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900 transition-colors">
               Live Demo
             </a>
