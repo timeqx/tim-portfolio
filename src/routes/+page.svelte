@@ -54,12 +54,12 @@
   <!-- Sections -->
   <Hero {profile} />
   <Iam  {profile}  />
+  
   <TechStack {techStack} />
+    <EducationCerts {experience} {education} {certifications} />
   <Projects {projects} />
-  <Experience {experience} />
  
    <Gallery />
-  <EducationCerts {education} {certifications} />
   <Contact {profile} />
   <Footer {profile} />
 </div>

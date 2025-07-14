@@ -18,8 +18,6 @@ import { onMount } from 'svelte';
         start: 'top bottom',
         end: 'bottom top',
         scrub: 4,
-
-        markers:true
       }
     });
   t1.fromTo(".tech-row", {
@@ -37,20 +35,23 @@ x:(index)=>{
 </script>
 
 <section class=" px-6 py-3 bg-[#131010] overflow-hidden" bind:this={component}>
-  <div class="max-w-6xl p-4 mx-auto">
-    <h2 class="text-6xl font-semibold font-[plexMono] text-gray-200 mb-8 tracking-tight  text-left opacity-80">What I Use</h2>
+  <div class="max-w-6xl p-4 mx-auto relative">
+    <h2 class="text-6xl font-semibold font-[plexMono] text-gray-200 mb-6 tracking-tight  text-left opacity-80">What I Use</h2>
       {#each techStack as category}
+      <div class="opacity-60 hover:opacity-100 transition-all duration-500">
+      <div class="text-lg font-semibold font-[plexMono] text-gray-200  tracking-tight  text-left  ml-10 opacity-50">{category.category}</div>
     <div class=" tech-row mb-4 flex items-center justify-center">
 
           {#each Array(15) as _, index}
             <div class="flex items-center justify-center" >
               {#each category.skills as skill}
-                <span class="tech-item text-5xl text-center font-bold uppercase tracking-tighter  whitespace-nowrap " style="color: {index === 7 && category.color ? category.color : '#292929'}" aria-label={skill || undefined}>
+                <span class="tech-item text-5xl text-center font-bold uppercase tracking-tighter  whitespace-nowrap text-gray-800" style="color: {index === 7 && category.color ? category.color : '#1e2939'}" aria-label={skill || undefined}>
                 {skill}◦
                 </span>
               {/each}
             </div>
           {/each}
+       </div>
        </div>
       {/each}
   </div>
