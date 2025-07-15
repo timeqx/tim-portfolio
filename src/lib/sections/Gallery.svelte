@@ -1,4 +1,4 @@
-<div class="mb-16">
+<div class="">
 	<div
 		class="flex h-96 items-center justify-center overflow-hidden rounded-2xl bg-gray-50 outline outline-gray-950/5"
 	>

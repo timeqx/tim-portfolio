@@ -59,21 +59,21 @@
 	});
 </script>
 
-<section id="projects" class="relative py-8 bg-gradient-to-br from-slate-50 to-gray-100">
+<section id="projects" class="relative flex items-center justify-center flex-col h-screen py-8 bg-gradient-to-br from-slate-50 to-gray-100">
 	<!-- Section Label -->
 	<div class="absolute top-1/2 right-10 -translate-y-1/2 rotate-90 z-10">
-		<p class="text-sm font-mono tracking-[0.3em] text-gray-400 uppercase">Projects</p>
+		<p class="text-3xl font-[plexMono] tracking-[0.3em] text-gray-800 uppercase">Projects</p>
 	</div>
 
 	<!-- Carousel Section -->
 	<div class="relative max-w-5xl  mx-auto flex items-center justify-center">
 		<!-- Left Arrow -->
-		<button on:click={prevProject} class="btn btn-circle hover:btn-primary mr-4" disabled={currentIndex === 0}>
+		<button on:click={prevProject} class="btn btn-circle hover:btn-neutral mr-4" disabled={currentIndex === 0}>
 			<FontAwesomeIcon icon={faArrowLeft} class="w-5 h-5" />
 		</button>
 
 		<!-- Carousel Track -->
-		<div class="overflow-hidden w-[45rem] bg-gray-400 justify-start items-center flex h-[36rem] rounded-2xl">
+		<div class="overflow-hidden w-[45rem] bg-[#131010] justify-start items-center flex h-[36rem] rounded-2xl">
 			<div
 				bind:this={carouselContainer}
 				class="flex transition-transform  duration-700 w-2xl ease-out"
@@ -132,18 +132,18 @@
 		</div>
 
 		<!-- Right Arrow -->
-		<button on:click={nextProject} class="btn btn-circle hover:btn-primary ml-4" disabled={currentIndex === projects.length - 1}>
+		<button on:click={nextProject} class="btn btn-circle hover:btn-neutral ml-4" disabled={currentIndex === projects.length - 1}>
 			<FontAwesomeIcon icon={faArrowRight} class="w-5 h-5" />
 		</button>
 	</div>
 
 	<!-- Dot Navigation -->
-	<div class="flex justify-center space-x-2 mt-8">
+	<div class="flex justify-center space-x-2 mt-8 bg-[#131010] px-2 py-2 rounded-lg w-auto">
 		{#each projects as _, index}
 			<button
 				on:click={() => goToProject(index)}
 				class="w-3 h-3 rounded-full transition-colors duration-200"
-				class:bg-blue-500={currentIndex === index}
+				class:bg-[#FAC050ff]={currentIndex === index}
 				class:bg-gray-300={currentIndex !== index}
 			></button>
 		{/each}

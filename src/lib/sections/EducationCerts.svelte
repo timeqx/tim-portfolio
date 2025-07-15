@@ -4,6 +4,7 @@
   import { TextPlugin } from 'gsap/dist/TextPlugin';
   import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
+
   gsap.registerPlugin(TextPlugin, ScrollTrigger);
 
   export let experience: {
@@ -63,12 +64,14 @@
   });
 </script>
 
-<section id="journey" class="bg-white py-24 px-6">
-  <div class="max-w-6xl mx-auto">
+<section id="journey" class="bg-white py-10 px-6 relative">
+  
+  <div class="max-w-6xl mx-auto relative">
+  
     <!-- Animated Section Title -->
     <h2
       bind:this={header}
-      class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16 font-[plexMono]"
+      class="text-xl md:text-2xl font-bold text-center text-gray-800 mb-4 font-[plexMono] uppercase z-50"
     >
       <!-- Will be replaced by TextPlugin -->
       My
@@ -77,7 +80,7 @@
     <div class="grid md:grid-cols-3 gap-12 text1">
       <!-- Experience -->
       <div>
-        <h3 class="text1 text-2xl font-semibold text-gray-900 mb-6">Experience</h3>
+        <h3 class="text1 text-xl font-semibold text-gray-900 mb-6">Experience</h3>
         <div class="space-y-6 text2">
           {#each experience as job}
             <div class="text1 border-l-4 border-gray-200 pl-5">
@@ -97,7 +100,7 @@
 
       <!-- Education -->
       <div>
-        <h3 class="text1 text-2xl font-semibold text-gray-900 mb-6">Education</h3>
+        <h3 class="text1 text-xl font-semibold text-gray-900 mb-6">Education</h3>
         <div class="space-y-6 text2">
           {#each education as edu}
             <div class="text1 border-l-4 border-gray-200 pl-5">
@@ -112,7 +115,7 @@
 
       <!-- Certifications -->
       <div>
-        <h3 class="text1 text-2xl font-semibold text-gray-900 mb-6">Certifications</h3>
+        <h3 class="text1 text-xl font-semibold text-gray-900 mb-6">Certifications</h3>
         <div class="space-y-6 text2">
           {#each certifications as cert}
             <div class="text1 border-l-4 border-gray-200 pl-5">

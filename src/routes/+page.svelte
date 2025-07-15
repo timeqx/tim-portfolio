@@ -3,9 +3,8 @@
   import Hero from '$lib/sections/Hero.svelte';
  import Iam from '$lib/sections/Iam.svelte';
   import TechStack from '$lib/sections/TechStack.svelte';
-  import Experience from '$lib/sections/Experience.svelte';
   import Gallery from '$lib/sections/Gallery.svelte';
-  import Projects from '$lib/sections/Services.svelte';
+  import Projects from '$lib/sections/Projects.svelte';
   import EducationCerts from '$lib/sections/EducationCerts.svelte';
   import Contact from '$lib/sections/Contact.svelte';
   import Footer from '$lib/sections/Footer.svelte';
@@ -54,12 +53,9 @@
   <!-- Sections -->
   <Hero {profile} />
   <Iam  {profile}  />
-  
   <TechStack {techStack} />
-    <EducationCerts {experience} {education} {certifications} />
   <Projects {projects} />
- 
-   <Gallery />
+    <EducationCerts {experience} {education} {certifications} />
   <Contact {profile} />
   <Footer {profile} />
 </div>

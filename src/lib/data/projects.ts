@@ -9,6 +9,7 @@ export const projects = [
     image:'/projects/drip.png',
     type:"web"
   },
+  
   {
     title: "Mobile Ticketing System for Transport Company",
     description:

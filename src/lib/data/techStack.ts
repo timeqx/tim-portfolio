@@ -1,12 +1,12 @@
 export const techStack = [
   {
     category: "Frontend",
-    skills: ["React", "Svelte", "Nextjs", "Tailwind", "Bootstrap","GSAP", "XAML"],
+    skills: ["React", "Nextjs","Svelte", "Tailwind", "Bootstrap","GSAP", "XAML"],
     color: '#8F4816'
   },
   {
     category: "Mobile",
-    skills: ["Flutter", "Dart", "Java"],
+    skills: ["Flutter", "Dart", "React Native"],
     color: '#FAC050ff'
   },
   {
