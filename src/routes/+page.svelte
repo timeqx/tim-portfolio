@@ -35,16 +35,16 @@
 
 <div class="min-h-screen">
   <!-- Navigation -->
-  <nav class=" top-0 w-full absolute  bg-transparent  z-50">
+  <nav class=" top-0 w-full absolute  bg-transparent  z-[999]">
     <div class="max-w-6xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
         <div class="font-semibold text-xl font-[plexMono] text-gray-400">{profile.name}</div>
         <div class="hidden md:flex space-x-8">
-          <button on:click={() => scrollToSection('about')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'about'}>About</button>
-          <button on:click={() => scrollToSection('techStack')} class="text-gray-800 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'techStack'}>Tech Stack</button>
-          <button on:click={() => scrollToSection('projects')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'projects'}>Projects</button>
-          <button on:click={() => scrollToSection('journey')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'education'}>Education</button>
-          <button on:click={() => scrollToSection('contact')} class="text-gray-600 hover:text-gray-900 transition-colors" class:text-gray-900={activeSection === 'contact'}>Contact</button>
+          <button on:click={() => scrollToSection('about')} class="text-gray-400 hover:text-[#8F4816] duration-300  transition-colors">About</button>
+          <button on:click={() => scrollToSection('techStack')} class="text-gray-400 hover:text-[#FAC050ff] duration-300  transition-colors" class:text-gray-900={activeSection === 'techStack'}>Tech Stack</button>
+          <button on:click={() => scrollToSection('projects')} class="text-gray-400 hover:text-[#B36673ff] duration-300  transition-colors" >Projects</button>
+          <button on:click={() => scrollToSection('journey')} class="text-gray-400 hover:text-[#9471CBff] duration-300  transition-colors" >Education</button>
+          <button on:click={() => scrollToSection('contact')} class="text-gray-400 hover:text-[#634a9b] duration-300 transition-colors" >Contact</button>
         </div>
       </div>
     </div>

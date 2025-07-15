@@ -21,23 +21,22 @@ export const projects = [
     type:"mobile"
   },
   {
-    title: "Inventory Management System",
+    title: "Learning Management System",
     description:
-      "Standalone desktop application for inventory tracking and supplier management, built in Java with MySQL integration.",
-    tech: ["Java", "MySQL"],
-    github: "",
-    demo: "",
-    image:'holo.jpg',
+      "Web-based platform for managing users, lessons, and student progress, built with C, MSSQL, and role-based access control.",
+    tech: ["C#", "ASP.NET MVC", "Entity Framework", "MSSQL", "Bootstrap", "jQuery"],
+    github: "https://github.com/timeqx/CourseSystem",
+    image:'/projects/lms.png',
     type:"web"
   },
   {
-    title: "Learning Management System",
-    description:
-      "Web-based platform for managing users, lessons, and student progress, built with Svelte, Firebase, and role-based access control.",
-    tech: ["Svelte", "JavaScript", "Firebase", "Tailwind CSS"],
-    github: "",
-    demo: "",
-    image:'holo.jpg',
-    type:"web"
-  }
+  title: "Tailwind Portfolio Experiment with Dark Mode",
+  description:
+    "A simple ASP.NET web app created to experiment with Tailwind CSS styling inside .cshtml Razor views. It serves as a creative playground to test UI layouts, component styling, and responsiveness using modern utility-first CSS.",
+  tech: ["ASP.NET", "C#", "CSHTML", "Tailwind CSS"],
+  github: "https://github.com/timeqx/My-Portfolio-Activity", 
+  image: '/projects/myport.png',
+  type: "web"
+}
+
 ];
