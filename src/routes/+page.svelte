@@ -29,7 +29,7 @@
 </script>
 
 <svelte:head>
-  <title>{profile.name} - Portfolio</title>
+  <title>timeqx dev</title>
   <meta name="description" content="{profile.name} - {profile.title} Portfolio" />
 </svelte:head>
 
