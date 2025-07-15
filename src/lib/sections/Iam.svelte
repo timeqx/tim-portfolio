@@ -80,7 +80,7 @@ gsap.fromTo(
 </script>
 
 
-<section class="bg-[#F4F3F2]  py-20  text-gray-900">
+<section  id="about" class="bg-gradient-to-br from-slate-100 to-gray-200  py-20  text-gray-900">
   <div class="absolute rotate-270">
     <p class="md:text-1xl  text-gray-500 font-semibold tracking-widest font-[plexMono] text-left text-xl ">WHO I AM</p>
   </div>

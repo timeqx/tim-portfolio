@@ -4,7 +4,7 @@
 	import HeroCube from './HeroCube.svelte';
 </script>
 
-<section id="about" class="relative top-0 h-screen overflow-hidden bg-[#131010] px-10">
+<section class="relative top-0 h-screen overflow-hidden bg-[#131010] px-10">
 	<!-- Floating Boxes -->
 
 	<HeroCube />

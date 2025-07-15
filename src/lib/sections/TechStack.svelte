@@ -34,7 +34,7 @@ x:(index)=>{
 });
 </script>
 
-<section class=" px-6 py-3 bg-[#131010] overflow-hidden" bind:this={component}>
+<section  id="techStack" class=" px-6 py-3 bg-[#131010] overflow-hidden" bind:this={component}>
   <div class="max-w-6xl p-4 mx-auto relative">
     <h2 class="text-6xl font-semibold font-[plexMono] text-gray-200 mb-6 tracking-tight  text-left opacity-80">What I Use</h2>
       {#each techStack as category}

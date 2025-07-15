@@ -46,17 +46,18 @@
 
     // Text block animation
     gsap.fromTo(
-      '.text1',
+      '.text11',
       { opacity: 0, y: 20 },
       {
         opacity: 0.9,
         y: 0,
         duration: 1,
         scrollTrigger: {
-          trigger: '.text1',
-          start: 'top 80%',
+          trigger: '.text11',
+          start: 'top 60%',
           toggleActions: 'play none none none',
-        }
+        },
+        stagger:0.3,
       }
     );
 
@@ -80,10 +81,10 @@
     <div class="grid md:grid-cols-3 gap-12 text1">
       <!-- Experience -->
       <div>
-        <h3 class="text1 text-xl font-semibold text-gray-900 mb-6">Experience</h3>
+        <h3 class="text11 text-xl font-semibold text-gray-900 mb-6">Experience</h3>
         <div class="space-y-6 text2">
           {#each experience as job}
-            <div class="text1 border-l-4 border-gray-200 pl-5">
+            <div class="text11 border-l-4 border-gray-200 pl-5">
               <h4 class="text-lg font-bold text-gray-800">{job.title}</h4>
               <p class="text-gray-600 text-sm mb-2">
                 {job.company} • <span class="text-gray-500">{job.period}</span>
@@ -100,14 +101,14 @@
 
       <!-- Education -->
       <div>
-        <h3 class="text1 text-xl font-semibold text-gray-900 mb-6">Education</h3>
+        <h3 class="text11 text-xl font-semibold text-gray-900 mb-6">Education</h3>
         <div class="space-y-6 text2">
           {#each education as edu}
-            <div class="text1 border-l-4 border-gray-200 pl-5">
+            <div class="text11 border-l-4 border-gray-200 pl-5">
               <p class="text-sm text-gray-600">{edu.level}</p>
-              <h4 class="text-lg font-bold text-gray-800">{edu.degree}</h4>
+              <h4 class="text-md font-bold text-gray-800">{edu.degree}</h4>
               <p class="text-sm text-gray-600">{edu.institution}</p>
-              <p class="text-xs text-gray-500">{edu.year} • {edu.gpa}</p>
+              <p class="text-xs italic text-gray-500">{edu.year} • {edu.gpa}</p>
             </div>
           {/each}
         </div>
@@ -115,10 +116,10 @@
 
       <!-- Certifications -->
       <div>
-        <h3 class="text1 text-xl font-semibold text-gray-900 mb-6">Certifications</h3>
+        <h3 class="text11 text-xl font-semibold text-gray-900 mb-6">Certifications</h3>
         <div class="space-y-6 text2">
           {#each certifications as cert}
-            <div class="text1 border-l-4 border-gray-200 pl-5">
+            <div class="text11 border-l-4 border-gray-200 pl-5">
               <h4 class="text-lg font-bold text-gray-800">{cert.name}</h4>
               <p class="text-sm text-gray-600">{cert.issuer}</p>
               <p class="text-xs text-gray-500">{cert.year} • ID: {cert.id}</p>

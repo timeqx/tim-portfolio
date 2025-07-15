@@ -11,7 +11,7 @@
 
 	let currentIndex = 0;
 	let carouselContainer: HTMLElement;
-	let projectCards = [];
+	let projectCards: HTMLElement[] = [];
 
 	gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -29,7 +29,7 @@
 		}
 	}
 
-	function goToProject(index) {
+	function goToProject(index: number) {
 		currentIndex = index;
 		updateCarousel();
 	}
@@ -59,10 +59,10 @@
 	});
 </script>
 
-<section id="projects" class="relative flex items-center justify-center flex-col h-screen py-8 bg-gradient-to-br from-slate-50 to-gray-100">
+<section id="projects" class="relative flex items-center justify-center flex-col h-screen py-8 bg-gradient-to-br from-slate-100 to-gray-200">
 	<!-- Section Label -->
 	<div class="absolute top-1/2 right-10 -translate-y-1/2 rotate-90 z-10">
-		<p class="text-3xl font-[plexMono] tracking-[0.3em] text-gray-800 uppercase">Projects</p>
+		<p class="text-2xl font-[plexMono] tracking-[0.5em] text-gray-800 font-extrabold uppercase">Projects</p>
 	</div>
 
 	<!-- Carousel Section -->

@@ -1,15 +1,15 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
   export let profile;
 
-  let sectionRef;
-  let titleRef;
-  let descriptionRef;
-  let contactLinksRef;
-  let buttonRef;
+  let sectionRef: HTMLElement | null;
+let titleRef: HTMLElement | null;
+let descriptionRef: HTMLElement | null;
+let contactLinksRef: HTMLElement | null;
+let buttonRef: HTMLButtonElement | null;
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +20,7 @@
         trigger: sectionRef,
         start: 'top 80%',
         end: 'bottom 20%',
-        toggleActions: 'play none none reverse'
+        toggleActions: 'play none none none', 
       }
     });
 
@@ -38,11 +38,12 @@
     );
 
     // Animate contact links
+    if(contactLinksRef){
     tl.fromTo(contactLinksRef.children,
       { opacity: 0, y: 20, scale: 0.9 },
       { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.1, ease: 'back.out(1.7)' },
       '-=0.3'
-    );
+    );}
 
     // Animate button
     tl.fromTo(buttonRef,
@@ -52,7 +53,9 @@
     );
 
     // Hover animations for contact links
-    contactLinksRef.children.forEach(link => {
+    if(contactLinksRef){
+      
+    contactLinksRef.children.forEach((link: HTMLElement) => {
       link.addEventListener('mouseenter', () => {
         gsap.to(link, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
       });
@@ -61,15 +64,17 @@
         gsap.to(link, { scale: 1, duration: 0.3, ease: 'power2.out' });
       });
     });
+  }
 
-    // Button hover animation
+    if(buttonRef){
     buttonRef.addEventListener('mouseenter', () => {
       gsap.to(buttonRef, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
     });
-    
+    }
+   if(buttonRef){
     buttonRef.addEventListener('mouseleave', () => {
       gsap.to(buttonRef, { scale: 1, duration: 0.3, ease: 'power2.out' });
-    });
+    });}
   });
 </script>
 
@@ -120,8 +125,8 @@
       </a>
 
       <!-- Phone -->
-      <a 
-        href="tel:{profile.phone}"
+      <div
+       
         class="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-green-500 transition-all duration-300"
       >
         <div class="flex flex-col items-center space-y-3">
@@ -133,7 +138,7 @@
           <span class="text-gray-300 group-hover:text-white transition-colors text-sm font-medium">Phone</span>
           <span class="text-xs text-gray-500">{profile.phone}</span>
         </div>
-      </a>
+      </div>
 
       <!-- GitHub -->
       <a 
