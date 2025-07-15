@@ -38,7 +38,7 @@ x:(index)=>{
   <div class="max-w-6xl p-4 mx-auto relative">
     <h2 class="text-6xl font-semibold font-[plexMono] text-gray-200 mb-6 tracking-tight  text-left opacity-80">What I Use</h2>
       {#each techStack as category}
-      <div class="opacity-60 hover:opacity-100 transition-all duration-500">
+      <div class="transition-all duration-500">
       <div class="text-lg font-semibold font-[plexMono] text-gray-200  tracking-tight  text-left  ml-10 opacity-50">{category.category}</div>
     <div class=" tech-row mb-4 flex items-center justify-center">
 

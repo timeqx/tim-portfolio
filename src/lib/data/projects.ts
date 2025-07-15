@@ -4,9 +4,9 @@ export const projects = [
     description:
       "Capstone project featuring an advance Ecommerce with 3D avatar integration, apparel visualization, and downloadable software 3D apparel editing. Developed using React, .NET, and Supabase.",
     tech: ["React", "C#", ".NET", "XAML", "Supabase", "Tailwind CSS"],
-    github: "https://github.com/timeqx/dripstr", // Replace with your actual link
-    demo: "",
-    image:'holo.jpg',
+    github: "https://github.com/Jhonjhorie/DRIPSTR_WEB", 
+    demo: "https://dripstr-web.netlify.app/",
+    image:'/projects/drip.png',
     type:"web"
   },
   {
@@ -14,9 +14,8 @@ export const projects = [
     description:
       "Mobile-based transaction and e-ticketing platform built using Flutter. Includes real-time ticket generation, sales reporting, and conductor-side features.",
     tech: ["Flutter", "Dart", "Firebase"],
-    github: "https://github.com/timeqx/transport-system", // Replace with your actual link
-    demo: "",
-    image:'holo.jpg',
+    image:'/projects/kundok.png',
+    demo: "https://drive.google.com/file/d/1fhhJ2euoSbM1gJQIv2EUhbpqCyLAml-F/view?usp=sharing"
     type:"mobile"
   },
   {

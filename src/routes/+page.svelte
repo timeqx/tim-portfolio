@@ -5,7 +5,7 @@
   import TechStack from '$lib/sections/TechStack.svelte';
   import Experience from '$lib/sections/Experience.svelte';
   import Gallery from '$lib/sections/Gallery.svelte';
-  import Projects from '$lib/sections/Projects.svelte';
+  import Projects from '$lib/sections/Services.svelte';
   import EducationCerts from '$lib/sections/EducationCerts.svelte';
   import Contact from '$lib/sections/Contact.svelte';
   import Footer from '$lib/sections/Footer.svelte';
