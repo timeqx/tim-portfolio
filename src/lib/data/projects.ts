@@ -15,7 +15,8 @@ export const projects = [
       "Mobile-based transaction and e-ticketing platform built using Flutter. Includes real-time ticket generation, sales reporting, and conductor-side features.",
     tech: ["Flutter", "Dart", "Firebase"],
     image:'/projects/kundok.png',
-    demo: "https://drive.google.com/file/d/1fhhJ2euoSbM1gJQIv2EUhbpqCyLAml-F/view?usp=sharing"
+     github: "https://github.com/timeqx/bus_tap_app", 
+    demo: "https://drive.google.com/file/d/1fhhJ2euoSbM1gJQIv2EUhbpqCyLAml-F/view?usp=sharing",
     type:"mobile"
   },
   {
