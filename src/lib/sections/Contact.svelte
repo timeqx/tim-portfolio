@@ -81,7 +81,7 @@ let buttonRef: HTMLButtonElement | null;
 <section 
   bind:this={sectionRef}
   id="contact" 
-  class="relative bg-black text-white py-10 px-6 overflow-hidden"
+  class="relative bg-black text-white py-6 md:py-10 px-6 overflow-hidden"
 >
   <!-- Animated background elements -->
   <div class="absolute inset-0 opacity-10">
@@ -93,7 +93,7 @@ let buttonRef: HTMLButtonElement | null;
     <!-- Title -->
     <p 
       bind:this={titleRef}
-      class="text-lg md:text-3xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
+      class="text-lg md:text-3xl font-bold mb-2 md:mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
     >
       Let's Connect
   </p>
@@ -101,17 +101,17 @@ let buttonRef: HTMLButtonElement | null;
     <!-- Description -->
     <p 
       bind:this={descriptionRef}
-      class="text-md md:text-lg text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
+      class="text-sm md:text-lg text-gray-300 mb-4 md:mb-8 max-w-2xl mx-auto leading-relaxed"
     >
       Ready to bring your ideas to life? I'm here to help turn your vision into reality.
     </p>
 
     <!-- Contact Links -->
-    <div bind:this={contactLinksRef} class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+    <div bind:this={contactLinksRef} class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-4 md:mb-16">
       <!-- Email -->
       <a 
         href="mailto:{profile.email}"
-        class="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-red-500 transition-all duration-300"
+        class="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl py-4 md:p-6 hover:border-red-500 transition-all duration-300"
       >
         <div class="flex flex-col items-center space-y-3">
           <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center">
@@ -127,7 +127,7 @@ let buttonRef: HTMLButtonElement | null;
       <!-- Phone -->
       <div
        
-        class="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-green-500 transition-all duration-300"
+        class="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl py-4 md:p-6 hover:border-green-500 transition-all duration-300"
       >
         <div class="flex flex-col items-center space-y-3">
           <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center">
@@ -145,7 +145,7 @@ let buttonRef: HTMLButtonElement | null;
         href="https://github.com/{profile.github}"
         target="_blank"
         rel="noopener noreferrer"
-        class="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-purple-500 transition-all duration-300"
+        class="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl py-4 md:p-6 hover:border-purple-500 transition-all duration-300"
       >
         <div class="flex flex-col items-center space-y-3">
           <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
@@ -163,7 +163,7 @@ let buttonRef: HTMLButtonElement | null;
         href="https://linkedin.com/in/{profile.linkedin}"
         target="_blank"
         rel="noopener noreferrer"
-        class="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-400 transition-all duration-300"
+        class="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl py-4 md:p-6 hover:border-blue-400 transition-all duration-300"
       >
         <div class="flex flex-col items-center space-y-3">
           <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full flex items-center justify-center">
@@ -181,7 +181,7 @@ let buttonRef: HTMLButtonElement | null;
     <button 
       bind:this={buttonRef}
       on:click={() => window.location.href = `mailto:${profile.email}`}
-      class="group relative bg-gradient-to-r from-[#9471CBff] to-[#5A30B6ff] text-white px-8 py-3 rounded-full font-medium text-md transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50"
+      class="group relative bg-gradient-to-r from-[#9471CBff] to-[#5A30B6ff] text-white px-3 md:px-8 py-3 rounded-full font-medium text-sm md:text-md transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50"
     >
       <span class="relative z-10 flex items-center space-x-2">
         <span>Start a Conversation</span>
