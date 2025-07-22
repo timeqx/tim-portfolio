@@ -9,6 +9,7 @@
   import Contact from '$lib/sections/Contact.svelte';
   import Footer from '$lib/sections/Footer.svelte';
   import { onMount } from 'svelte';
+  import HeroCube from '$lib/sections/HeroCube.svelte';
   
 
   let mounted = false;
@@ -33,7 +34,7 @@
   <meta name="description" content="{profile.name} - {profile.title} Portfolio" />
 </svelte:head>
 
-<div class="min-h-screen">
+<div class="relative min-h-screen overflow-hidden">
   <!-- Navigation -->
   <nav class=" top-0 w-full absolute  bg-transparent  z-[999]">
     <div class="max-w-6xl mx-auto px-6 py-4">
@@ -51,7 +52,12 @@
   </nav>
 
   <!-- Sections -->
-  <Hero {profile} />
+   <div class="absolute top-0">
+   <HeroCube />
+   </div>
+    <Hero {profile} />
+
+ 
   <Iam  {profile}  />
   <TechStack {techStack} />
   <Projects {projects} />

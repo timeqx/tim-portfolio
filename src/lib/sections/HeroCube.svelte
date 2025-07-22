@@ -102,6 +102,8 @@
       orbitSpeed: 40
     }
   ];
+
+
 </script>
 
 <style>
@@ -199,6 +201,13 @@
   .orbit-anchor {
     transform-style: preserve-3d;
   }
+
+  @media (max-width: 640px) {
+  .orbiting-cube {
+    animation-duration: 180s !important;
+  }
+}
+
 </style>
 
 <div class=" absolute inset-0 -top-18  right-2 z-20 orbit-container rolling-element ">
