@@ -11,7 +11,7 @@ export const techStack = [
   },
   {
     category: "Backend",
-    skills: ["Python","C#","Golang", ".NET", "Java", "Node.js", "SQL"],
+    skills: ["Python","C#",, ".NET", "Java", "Node.js", "SQL"],
    color: '#B36673ff'
   },
   {

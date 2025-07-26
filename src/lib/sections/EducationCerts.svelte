@@ -117,7 +117,6 @@
             <div class="text11 border-l-4 border-gray-200 pl-4">
               <h4 class="text-md sm:text-lg font-bold text-gray-800">{cert.name}</h4>
               <p class="text-sm text-gray-600">{cert.issuer}</p>
-              <p class="text-xs text-gray-500">{cert.year} • ID: {cert.id}</p>
             </div>
           {/each}
         </div>

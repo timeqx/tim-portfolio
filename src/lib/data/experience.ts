@@ -1,7 +1,7 @@
 export const experience = [
   {
     title: "Junior QA Specialist (Intern)",
-    company: "Confidential – Quezon City",
+    company: "Sandman Software Systems Inc. – Quezon City",
     period: "2024",
     responsibilities: [
       "Documented and reported software bugs and functional issues for developing systems",
