@@ -1,33 +1,114 @@
 <script>
-	export let profile;
-	
+  import { onMount } from 'svelte';
+  
+  export let profile;
+  
+  let mounted = false;
+  
+  onMount(() => {
+    mounted = true;
+  });
 </script>
 
-<section class="relative h-screen overflow-hidden bg-[#131010] px-4 md:px-10">
-	
+<style>
+  @keyframes subtle-float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(1deg); }
+  }
+  
+  @keyframes gentle-pulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+  }
+  
+  @keyframes text-reveal {
+    from { 
+      opacity: 0; 
+      transform: translateY(30px);
+      filter: blur(10px);
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0px);
+      filter: blur(0px);
+    }
+  }
+  
+  @keyframes fade-up {
+    from { 
+      opacity: 0; 
+      transform: translateY(40px);
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0px);
+    }
+  }
+  
+  .hero-text {
+    animation: text-reveal 1.2s ease-out 0.5s both;
+  }
+  
+  .hero-subtitle {
+    animation: text-reveal 1.2s ease-out 0.8s both;
+  }
+  
+  .floating-accent {
+    animation: subtle-float 6s ease-in-out infinite;
+  }
+  
+  .ambient-glow {
+    animation: gentle-pulse 8s ease-in-out infinite;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #e5e5e5 0%, #a3a3a3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .accent-gradient {
+    background: linear-gradient(135deg, #9471cb 0%, #b36673 50%, #fac050 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
 
-	<div class="absolute z-50 flex items-center justify-center h-full w-full">
-		<div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-32 h-full w-full max-w-7xl mx-auto">
-			<!-- Left: Halo Effect -->
-			<div class="relative z-10 flex items-center justify-center lg:w-1/2 w-full mb-10 lg:mb-0">
-				<div class="animate-[haloPulse_20s_ease-in_infinite] rounded-full p-10 md:p-20 relative">
-					<div class="absolute inset-0 opacity-10 z-10">
-						<div class="absolute top-1/4 left-1/4 w-48 h-48 md:w-96 md:h-96 bg-gradient-to-r from-[#8F4816] to-[#FAC050ff] rounded-full blur-3xl"></div>
-						<div class="absolute bottom-1/4 right-1/4 w-48 h-48 md:w-96 md:h-96 bg-gradient-to-r from-[#B36673ff] to-[#9471CBff] rounded-full blur-3xl"></div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Right: Hero Text -->
-			<div class="z-20 text-center lg:text-left max-w-xl px-4">
-				<h1 class="mb-4 text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold text-gray-200 font-[plexMono] animate-[glitch_2s_ease-in_infinite] tracking-widest">
-					{profile.name}
-				</h1>
-				<p class="text-lg sm:text-xl md:text-2xl text-transparent bg-gradient-to-r from-[#9471cbc2] via-[#B36673ff] to-[#fac15081] bg-clip-text">
-					Front to back, full stack — delivering modern cross-platform solutions with timeless performance.
-				</p>
-			</div>
-		</div>
-	</div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center bg-[#131010] overflow-hidden">
+  <!-- Ambient Background -->
+  <div class="absolute inset-0">
+    <!-- Subtle gradient orbs -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-[#8F4816]/10 to-[#FAC050]/5 rounded-full blur-3xl ambient-glow"></div>
+    <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-bl from-[#9471CB]/8 to-[#B36673]/5 rounded-full blur-3xl ambient-glow" style="animation-delay: 2s;"></div>
+    
+    <!-- Floating accent elements -->
+    <div class="absolute top-20 right-20 w-2 h-2 bg-[#FAC050]/60 rounded-full floating-accent"></div>
+    <div class="absolute bottom-32 left-16 w-1 h-1 bg-[#9471CB]/40 rounded-full floating-accent" style="animation-delay: 3s;"></div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <!-- Name -->
+    <h1 class="hero-text mb-6 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-wider text-gradient font-mono">
+      {profile?.name || 'Timothy Osorio'}
+    </h1>
+    
+    <!-- Tagline -->
+    <p class="hero-subtitle text-xl sm:text-2xl md:text-3xl font-light text-neutral-400 max-w-3xl mx-auto leading-relaxed">
+      Full Stack Developer crafting
+      <span class="accent-gradient font-medium">elegant solutions</span>
+      from concept to deployment
+    </p>
+    
+    <!-- Minimal CTA -->
+    <div class="mt-12 opacity-0 animate-[fade-up_1s_ease-out_1.2s_both]">
+      <div class="inline-flex items-center space-x-2 text-neutral-500 text-sm tracking-widest">
+        <span>SCROLL TO EXPLORE</span>
+        <div class="w-4 h-4 border border-neutral-500 border-t-0 border-l-0 rotate-45 animate-bounce"></div>
+      </div>
+    </div>
+  </div>
 </section>
-

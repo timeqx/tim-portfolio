@@ -25,7 +25,6 @@
     name: string;
     issuer: string;
     year: string;
-    id: string;
   }[];
 
   let header: HTMLElement;

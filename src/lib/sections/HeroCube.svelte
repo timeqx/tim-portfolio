@@ -1,231 +1,185 @@
 <script>
   import { onMount } from 'svelte';
   
-  // Array of cube configurations with original positions
+  // Minimal cube configurations - fewer cubes, cleaner arrangement
   const cubes = [
     { 
-      size: 'h-24 w-24', 
-      shadow: 'shadow-[0_10px_15px_#8F4816ff]', 
-      hoverShadow: 'group-hover:shadow-[5px_-5px_25px_#FAC050ff]',
-      position: 'top-5 left-10',
-      orbitRadius: 30,
-      orbitSpeed: 30
+      size: 'h-16 w-16', 
+      shadow: 'shadow-[0_8px_32px_rgba(143,72,22,0.3)]', 
+      hoverShadow: 'hover:shadow-[0_12px_40px_rgba(250,192,80,0.4)]',
+      position: 'top-[15%] left-[10%]',
+      delay: '0s'
     },
     { 
       size: 'h-12 w-12', 
-      shadow: 'shadow-[0_-5px_15px_#FAC050ff]', 
-      hoverShadow: 'group-hover:shadow-[5px_5px_20px_#8F4816ff]',
-      position: 'top-40 left-30',
-      orbitRadius: 25,
-      orbitSpeed: 29
+      shadow: 'shadow-[0_6px_24px_rgba(148,113,203,0.25)]', 
+      hoverShadow: 'hover:shadow-[0_10px_32px_rgba(90,48,182,0.35)]',
+      position: 'top-[60%] left-[15%]',
+      delay: '2s'
     },
     { 
       size: 'h-20 w-20', 
-      shadow: 'shadow-[0_-5px_15px_#9471CBff]', 
-      hoverShadow: 'group-hover:shadow-[5px_5px_20px_#5A30B6ff]',
-      position: 'top-90 right-140',
-      orbitRadius: 35,
-      orbitSpeed: 28
+      shadow: 'shadow-[0_10px_36px_rgba(179,102,115,0.3)]', 
+      hoverShadow: 'hover:shadow-[0_15px_48px_rgba(148,113,203,0.4)]',
+      position: 'top-[25%] right-[12%]',
+      delay: '4s'
     },
     { 
-      size: 'h-28 w-28', 
-      shadow: 'shadow-[0_12px_20px_#8b5cf6]', 
-      hoverShadow: 'group-hover:shadow-[6px_6px_35px_#d8b4fe]',
-      position: 'top-140 right-40',
-      orbitRadius: 40,
-      orbitSpeed: 26
+      size: 'h-14 w-14', 
+      shadow: 'shadow-[0_7px_28px_rgba(107,33,168,0.25)]', 
+      hoverShadow: 'hover:shadow-[0_12px_36px_rgba(192,132,252,0.35)]',
+      position: 'top-[70%] right-[8%]',
+      delay: '6s'
     },
     { 
-      size: 'h-8 w-8', 
-      shadow: 'shadow-[5px_0_10px_#B36673ff]', 
-      hoverShadow: 'group-hover:shadow-[-2px_-2px_15px_#9471CBff]',
-      position: 'top-30 right-170',
-      orbitRadius: 20,
-      orbitSpeed: 32
-    },
-    { 
-      size: 'h-16 w-16', 
-      shadow: 'shadow-[10px_0_15px_#6b21a8]', 
-      hoverShadow: 'group-hover:shadow-[0_-10px_30px_#c084fc]',
-      position: 'top-100 right-60',
-      orbitRadius: 30,
-      orbitSpeed: 40
+      size: 'h-10 w-10', 
+      shadow: 'shadow-[0_5px_20px_rgba(250,193,21,0.2)]', 
+      hoverShadow: 'hover:shadow-[0_8px_28px_rgba(250,192,80,0.3)]',
+      position: 'top-[45%] left-[50%]',
+      delay: '8s'
     }
   ];
-  const cubes2 = [
-    { 
-      size: 'h-24 w-24', 
-      shadow: 'shadow-[0_10px_15px_#8F4816ff]', 
-      hoverShadow: 'group-hover:shadow-[5px_-5px_25px_#FAC050ff]',
-      position: 'top-140 left-150',
-      orbitRadius: 30,
-      orbitSpeed: 30
-    },
-    { 
-      size: 'h-12 w-12', 
-      shadow: 'shadow-[0_-5px_15px_#FAC050ff]', 
-      hoverShadow: 'group-hover:shadow-[5px_5px_20px_#8F4816ff]',
-      position: 'top-140 left-10',
-      orbitRadius: 25,
-      orbitSpeed: 29
-    },
-    { 
-      size: 'h-20 w-20', 
-      shadow: 'shadow-[0_-5px_15px_#9471CBff]', 
-      hoverShadow: 'group-hover:shadow-[5px_5px_20px_#5A30B6ff]',
-      position: 'top-100 right-90',
-      orbitRadius: 35,
-      orbitSpeed: 28
-    },
-    { 
-      size: 'h-28 w-28', 
-      shadow: 'shadow-[0_12px_20px_#8b5cf6]', 
-      hoverShadow: 'group-hover:shadow-[6px_6px_35px_#d8b4fe]',
-      position: 'top-15 left-80',
-      orbitRadius: 40,
-      orbitSpeed: 26
-    },
-    { 
-      size: 'h-8 w-8', 
-      shadow: 'shadow-[5px_0_10px_#B36673ff]', 
-      hoverShadow: 'group-hover:shadow-[-2px_-2px_15px_#9471CBff]',
-      position: 'top-80 right-10',
-      orbitRadius: 20,
-      orbitSpeed: 32
-    },
-    { 
-      size: 'h-16 w-16', 
-      shadow: 'shadow-[10px_0_15px_#6b21a8]', 
-      hoverShadow: 'group-hover:shadow-[0_-10px_30px_#c084fc]',
-      position: 'top-40 right-140',
-      orbitRadius: 30,
-      orbitSpeed: 40
-    }
-  ];
+
+  let mounted = false;
+  
+  onMount(() => {
+    mounted = true;
+  });
 </script>
 
 <style>
- 
-
-  @keyframes orbitRoll {
-     from  {
-    transform: translate3d(90rem, 0rem, 20rem);
-  }
-  to  {
-    transform: translate3d(-90rem, -2rem, 20rem);
-  }}
-  
-  @keyframes orbitRoll2 {
-     0%  {
-    transform: translate3d(0rem, 0rem, 20rem);
-    opacity:1
-  }
-    49%  {
-    transform: translate3d(-90rem, 0rem, 20rem);
-    opacity:1
-  }
-  49.5%  {
-    transform: translate3d(-90rem, 0rem, 20rem);
-    opacity:0
-  }
-    50%  {
-    transform: translate3d(90rem, 0rem, 20rem);
-    opacity:0
-  }
-  51%  {
-    transform: translate3d(90rem, 0rem, 20rem);
-    opacity:1
-  }
- 
-  100%  {
-    transform: translate3d(0rem, 0rem, 20rem);
+  @keyframes float {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+      transform: translate3d(10px, -15px, 5px) rotateX(5deg) rotateY(10deg);
+    }
+    50% {
+      transform: translate3d(-5px, -25px, 10px) rotateX(-3deg) rotateY(-5deg);
+    }
+    75% {
+      transform: translate3d(-15px, -10px, 5px) rotateX(2deg) rotateY(-8deg);
+    }
   }
 
-
-}
-  .rolling-element {
-    
-  animation: orbitRoll 120s linear infinite;
-  transform-style: preserve-3d;
-}
-.rolling-element2 {
-    
-  animation: orbitRoll2 120s linear infinite;
-  transform-style: preserve-3d;
-}
-  
-  .orbit-container {
-    transform-style: preserve-3d;
-    perspective: 1000px;
+  @keyframes fadeInFloat {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50px, -20px) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
   }
-  
+
+  @keyframes subtleGlow {
+    0%, 100% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(1.1);
+    }
+  }
+
   .cube {
     transform-style: preserve-3d;
     position: relative;
+    animation: float 8s ease-in-out infinite;
+    will-change: transform;
   }
-  
+
   .cube::before {
     content: '';
     position: absolute;
-    top: -3px;
-    left: -3px;
+    top: -2px;
+    left: -2px;
     width: 100%;
     height: 100%;
-    background: inherit;
+    background: linear-gradient(135deg, rgba(19,16,16,0.9) 0%, rgba(25,20,20,0.8) 100%);
     border-radius: inherit;
-    transform: translateZ(-6px) scale(0.9);
-    opacity: 0.6;
-    box-shadow: inherit;
+    transform: translateZ(-4px) scale(0.95);
+    opacity: 0.7;
+    border: 1px solid rgba(255,255,255,0.05);
   }
-  
+
   .cube::after {
     content: '';
     position: absolute;
-    top: -2px;
-    right: -4px;
+    top: -1px;
+    right: -3px;
     width: 100%;
     height: 100%;
-    background: inherit;
+    background: linear-gradient(45deg, rgba(19,16,16,0.8) 0%, rgba(30,25,25,0.7) 100%);
     border-radius: inherit;
-    transform: rotateY(90deg) translateZ(-3px) scale(0.95);
-    opacity: 0.4;
-    box-shadow: inherit;
+    transform: rotateY(90deg) translateZ(-2px) scale(0.98);
+    opacity: 0.5;
+    border: 1px solid rgba(255,255,255,0.03);
   }
-  
-  .orbiting-cube {
-    animation: orbit45 var(--orbit-speed) linear infinite;
+
+  .cube-container {
+    animation: fadeInFloat 2s ease-out forwards;
+    animation-delay: var(--delay);
+    opacity: 0;
   }
-  
-  .orbit-anchor {
+
+  .cube-container:nth-child(odd) .cube {
+    animation-direction: reverse;
+  }
+
+  .cube-container:hover .cube {
+    animation-duration: 4s;
+    filter: brightness(1.15);
+  }
+
+  .floating-field {
     transform-style: preserve-3d;
+    perspective: 1200px;
+  }
+
+  .backdrop-element {
+    background: rgba(19,16,16,0.92);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  @media (max-width: 768px) {
+    .cube-container {
+      transform: scale(0.8);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cube, .cube-container {
+      animation: none;
+    }
+    .cube {
+      transform: none;
+    }
   }
 </style>
 
-<div class=" absolute inset-0 -top-18  right-2 z-20 orbit-container rolling-element ">
-  {#each cubes as cube, index}
-    <div class="group absolute {cube.position} z-0 orbit-anchor">
+<!-- Floating Cube Field Background -->
+<div class="absolute inset-0 z-10 floating-field pointer-events-none overflow-hidden">
+  {#if mounted}
+    {#each cubes as cube, index}
       <div 
-        class="orbiting-cube p-24"
-        style="--orbit-radius: {cube.orbitRadius}px; --orbit-speed: {cube.orbitSpeed}s;"
+        class="cube-container absolute {cube.position} group"
+        style="--delay: {cube.delay}"
       >
         <div
-          class="cube {cube.size} rounded-lg bg-[#181616] {cube.shadow} backdrop-blur-md transition-all duration-[1s] ease-out {cube.hoverShadow}"
+          class="cube {cube.size} backdrop-element {cube.shadow} transition-shadow duration-500 {cube.hoverShadow}"
+          style="animation-delay: {parseFloat(cube.delay) + index * 0.5}s"
         ></div>
       </div>
-    </div>
-  {/each}
-</div>
-<div class=" absolute inset-0 -top-18  right-2 z-30 orbit-container rolling-element2 ">
-  {#each cubes2 as cube, index}
-    <div class="group absolute {cube.position} z-0 orbit-anchor">
-      <div 
-        class="orbiting-cube p-24"
-        style="--orbit-radius: {cube.orbitRadius}px; --orbit-speed: {cube.orbitSpeed}s;"
-      >
-        <div
-          class="cube {cube.size} rounded-lg bg-[#181616] {cube.shadow} backdrop-blur-md transition-all duration-[1s] ease-out {cube.hoverShadow}"
-        ></div>
-      </div>
-    </div>
-  {/each}
+    {/each}
+  {/if}
+
+  <!-- Subtle ambient particles -->
+  <div class="absolute top-[20%] left-[25%] w-1 h-1 bg-gradient-to-r from-[#9471CB] to-transparent rounded-full opacity-60 animate-pulse" style="animation-delay: 3s;"></div>
+  <div class="absolute top-[80%] right-[30%] w-1 h-1 bg-gradient-to-r from-[#FAC050] to-transparent rounded-full opacity-40 animate-pulse" style="animation-delay: 7s;"></div>
+  <div class="absolute top-[35%] right-[60%] w-0.5 h-0.5 bg-gradient-to-r from-[#B36673] to-transparent rounded-full opacity-50 animate-pulse" style="animation-delay: 12s;"></div>
 </div>
