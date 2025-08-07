@@ -54,7 +54,7 @@
   }
 </style>
 
-<section id="techStack" class="relative py-16 bg-gradient-to-br from-neutral-900 to-neutral-800 min-h-screen flex items-center">
+<section id="techStack" class="relative py-8 bg-gradient-to-br from-neutral-900 to-neutral-800 min-h-screen flex items-start">
   <!-- Section Label -->
   <div class="absolute left-8 top-16">
     <p class="rotate-[-90deg] text-xs font-mono text-neutral-400 tracking-[0.2em] uppercase whitespace-nowrap">
@@ -151,7 +151,7 @@
     </div>
     
     <!-- Overall Stats -->
-    <div class="mt-12 pt-8 border-t border-white/10">
+    <div class="mt-8 pt-8 border-t border-white/10">
       <div class="grid grid-cols-4 gap-4 text-center">
         <div class="space-y-1">
           <div class="text-2xl font-light text-white">{techStack.reduce((acc, cat) => acc + cat.skills.length, 0)}</div>
