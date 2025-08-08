@@ -115,12 +115,10 @@
   <div class="bg-accent absolute bottom-20 left-10 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-20"></div>
   
   <!-- Side label -->
-  <div class="absolute left-6 lg:left-12 top-1/2 -translate-y-1/2 hidden md:block">
-    <div class="side-label -rotate-90 origin-center">
-      <span class="text-xs font-medium text-gray-400 tracking-[0.2em] uppercase">
-        About
-      </span>
-    </div>
+  <div class="absolute left-1 sm:left-8 top-16">
+    <p class="rotate-[-90deg] text-xs font-mono text-neutral-800 tracking-[0.2em] uppercase whitespace-nowrap">
+      About
+    </p>
   </div>
 
   <div class="mx-auto max-w-7xl px-6 lg:px-12">

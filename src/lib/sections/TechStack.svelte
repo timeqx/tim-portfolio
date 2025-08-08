@@ -56,7 +56,7 @@
 
 <section id="techStack" class="relative py-8 bg-gradient-to-br from-neutral-900 to-neutral-800 min-h-screen flex items-start">
   <!-- Section Label -->
-  <div class="absolute left-8 top-16">
+  <div class="absolute -left-4  sm:left-8 top-16">
     <p class="rotate-[-90deg] text-xs font-mono text-neutral-400 tracking-[0.2em] uppercase whitespace-nowrap">
       Tech Stack
     </p>

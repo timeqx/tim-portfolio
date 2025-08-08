@@ -1,5 +1,17 @@
 export const projects = [
   {
+   title: "Moino – AI-Assisted Money Management",
+description: "A mobile app that uses AI to analyze spending patterns, offer budgeting advice, and provide real-time financial insights for smarter money decisions.",
+tech: ["Flutter", "Dart", "Supabase", "Riverpod", "OpenAI API"],
+github: "https://github.com/Jhonjhorie/moino_wallet_ai",
+demo: "",
+image: "/projects/moino.png",
+image2: "/projects/moino.png",
+image3: "/projects/moino.png",
+type: "mobile"
+
+  },
+  {
     title: "Dripstr – 3D Apparel Ecommerce Platform",
     description:
       "Capstone project featuring an advance Ecommerce with 3D avatar integration, apparel visualization, and downloadable software 3D apparel editing. Developed using React, .NET, and Supabase.",
@@ -16,6 +28,8 @@ export const projects = [
       "Mobile-based transaction and e-ticketing platform built using Flutter. Includes real-time ticket generation, sales reporting, and conductor-side features.",
     tech: ["Flutter", "Dart", "Firebase"],
     image:'/projects/kundok.png',
+    image2:'/projects/kundok2.png',
+    image3:'/projects/kundok3.png',
      github: "https://github.com/timeqx/bus_tap_app", 
     demo: "https://drive.google.com/file/d/1fhhJ2euoSbM1gJQIv2EUhbpqCyLAml-F/view?usp=sharing",
     type:"mobile"
