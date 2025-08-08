@@ -166,8 +166,8 @@
   }
 
   .mobile-screen {
-    width: 160px;
-    height: 320px;
+    width: 180px;
+    height: 390px ;
   }
 
   .tech-tag {
