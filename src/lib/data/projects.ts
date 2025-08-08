@@ -5,9 +5,9 @@ description: "A mobile app that uses AI to analyze spending patterns, offer budg
 tech: ["Flutter", "Dart", "Supabase", "Riverpod", "OpenAI API"],
 github: "https://github.com/Jhonjhorie/moino_wallet_ai",
 demo: "",
-image: "/projects/moino.png",
-image2: "/projects/moino.png",
-image3: "/projects/moino.png",
+image: "/projects/moino.jpg",
+image2: "/projects/moino1.jpg",
+image3: "/projects/moino2.jpg",
 type: "mobile"
 
   },
