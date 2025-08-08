@@ -80,8 +80,7 @@ let buttonRef: HTMLButtonElement | null;
 
 <section 
   bind:this={sectionRef}
-  id="contact" 
-  class="relative bg-black text-white py-6 md:py-10 px-6 overflow-hidden"
+  class="relative bg-black text-white py-6 md:py-18 px-6 overflow-hidden"
 >
   <!-- Animated background elements -->
   <div class="absolute inset-0 opacity-10">

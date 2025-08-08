@@ -29,53 +29,96 @@
   const sections = [
     { id: 'hero', label: 'Home', color: '#9471CB' },
     { id: 'about', label: 'About', color: '#8F4816' },
-    { id: 'techStack', label: 'Stack', color: '#FAC050' },
-    { id: 'projects', label: 'Work', color: '#B36673' },
+    { id: 'techStackS', label: 'Stack', color: '#FAC050' },
+    { id: 'projectsS', label: 'Work', color: '#B36673' },
     { id: 'journey', label: 'Journey', color: '#9471CB' },
     { id: 'contact', label: 'Contact', color: '#634a9b' }
   ];
 
   onMount(() => {
-    mounted = true;
-    
-    // Intersection Observer for active section tracking
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-            activeSection = entry.target.id;
-          }
-        });
-      },
-      { threshold: [0.3, 0.7], rootMargin: '-80px 0px -80px 0px' }
-    );
+  mounted = true;
+  
+  const observer = new IntersectionObserver(
+    (entries) => {
+  
+      const sortedEntries = entries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      
+      for (const entry of sortedEntries) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+          activeSection = entry.target.id;
+          break; 
+        }
+      }
+    },
+    { 
+      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+      rootMargin: '-100px 0px -100px 0px' 
+    }
+  );
 
-    // Observe all sections
+  const manualSectionDetection = () => {
+    if (!browser) return;
+    
+    const scrollPosition = window.scrollY + 200; 
+    let currentSection = 'hero';
+    
     sections.forEach(section => {
       const element = document.getElementById(section.id);
-      if (element) observer.observe(element);
-    });
-
-    // Update scroll progress
-    const updateScrollProgress = () => {
-      if (browser && document.documentElement) {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        scrollProgress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      if (element) {
+        const offsetTop = element.offsetTop;
+        const offsetBottom = offsetTop + element.offsetHeight;
+        
+        if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+          currentSection = section.id;
+        }
       }
-    };
+    });
+    
+    if (currentSection !== activeSection) {
+      activeSection = currentSection;
+    }
+  };
 
-    // Initial calculation
-    updateScrollProgress();
 
-    // Listen for scroll events
-    window.addEventListener('scroll', updateScrollProgress, { passive: true });
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('scroll', updateScrollProgress);
-    };
+  sections.forEach(section => {
+    const element = document.getElementById(section.id);
+    if (element) {
+      observer.observe(element);
+    }
   });
+
+  const updateScrollProgress = () => {
+    if (browser && document.documentElement) {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      scrollProgress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      
+     
+      manualSectionDetection();
+    }
+  };
+
+
+  updateScrollProgress();
+
+  let ticking = false;
+  const handleScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateScrollProgress();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  return () => {
+    observer.disconnect();
+    window.removeEventListener('scroll', handleScroll);
+  };
+});
 
   function scrollToSection(sectionId: string) {
     activeSection = sectionId;
@@ -83,7 +126,7 @@
     
     const element = document.getElementById(sectionId);
     if (element) {
-      const offsetTop = element.offsetTop - 80;
+      const offsetTop = element.offsetTop - 65;
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'
@@ -289,12 +332,12 @@
     </div>
 
     <!-- Tech Stack Section -->
-    <div id="techStack" class="section-wrapper">
+    <div id="techStackS" class="section-wrapper">
       <TechStack {techStack} />
     </div>
 
     <!-- Projects Section -->
-    <div id="projects" class="section-wrapper">
+    <div id="projectsS" class="section-wrapper">
       <Projects {projects} />
     </div>
 

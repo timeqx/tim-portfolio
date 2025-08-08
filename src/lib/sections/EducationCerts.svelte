@@ -120,7 +120,7 @@
   });
 </script>
 
-<section id="journey" class="relative bg-slate-100 py-10 lg:py-10 overflow-hidden">
+<section class="relative bg-slate-100 py-10 lg:py-10 overflow-hidden">
   <!-- Background accents -->
   <div class="bg-accent-journey absolute top-10 left-10 w-72 h-72 bg-blue-100/30 rounded-full blur-3xl"></div>
   <div class="bg-accent-journey absolute bottom-10 right-10 w-80 h-80 bg-purple-100/20 rounded-full blur-3xl"></div>

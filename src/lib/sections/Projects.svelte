@@ -210,7 +210,7 @@
   }
 </style>
 
-<section id="projects" class="relative min-h-screen bg-gradient-to-br from-neutral-50 to-neutral-100 py-10">
+<section class="relative min-h-screen bg-gradient-to-br from-neutral-50 to-neutral-100 py-10">
  
   <div class="absolute -left-8 sm:left-8 top-16">
     <p class="rotate-[-90deg] text-xs font-mono text-neutral-800 tracking-[0.2em] uppercase whitespace-nowrap">
